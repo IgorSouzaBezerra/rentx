@@ -15,7 +15,7 @@ const createCarSpecificationController = new CreateCarSpecificationController();
 
 carsRoutes.get("/available", listAvailableCarsController.handle);
 
-carsRoutes.use(
+carsRoutes.post(
   "/",
   ensureAuthenticated,
   ensureAdmin,
