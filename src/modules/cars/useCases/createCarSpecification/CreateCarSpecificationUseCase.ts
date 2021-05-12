@@ -20,7 +20,6 @@ class CreateCarSpecificationUseCase {
     private specificationsRepository: ISpecificationsRepository
   ) {}
   public async execute({ car_id, specifications_id }: IRequest): Promise<Car> {
-    console.log("Entrou no usecase");
     const carExists = await this.carsRepository.findById(car_id);
 
     if (!carExists) {
