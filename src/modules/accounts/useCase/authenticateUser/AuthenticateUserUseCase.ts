@@ -30,7 +30,7 @@ class AuthenticateUserUseCase {
     @inject("UsersTokensRepository")
     private usersTokensRepository: IUsersTokensRepository,
     @inject("DayJsDateProvider")
-    private dataProvider: IDateProvider
+    private dateProvider: IDateProvider
   ) {}
 
   public async execute({ email, password }: IRequest): Promise<IResponse> {
@@ -56,7 +56,7 @@ class AuthenticateUserUseCase {
       expiresIn: auth.expires_in_refresh_token,
     });
 
-    const refresh_token_expires_date = this.dataProvider.addDays(
+    const refresh_token_expires_date = this.dateProvider.addDays(
       auth.expires_refresh_token_days
     );
 
