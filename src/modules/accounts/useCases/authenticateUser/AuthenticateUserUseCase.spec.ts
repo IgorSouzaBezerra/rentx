@@ -1,8 +1,8 @@
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
 import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
 import { UsersTokensRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersTokensRepositoryInMemory";
-import { AuthenticateUserUseCase } from "@modules/accounts/useCase/authenticateUser/AuthenticateUserUseCase";
-import { CreateUserUseCase } from "@modules/accounts/useCase/createUser/CreateUserUseCase";
+import { AuthenticateUserUseCase } from "@modules/accounts/useCases/authenticateUser/AuthenticateUserUseCase";
+import { CreateUserUseCase } from "@modules/accounts/useCases/createUser/CreateUserUseCase";
 import { DayJsDateProvider } from "@shared/container/provider/DateProvider/implementations/DayJsDateProvider";
 import { AppError } from "@shared/errors/AppError";
 
