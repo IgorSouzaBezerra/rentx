@@ -117,5 +117,6 @@ dist
 .pnp.*
 yarn.lock
 
-tmp/
-
+tmp/*
+!tmp/.gitkeep
+ormconfig.json
